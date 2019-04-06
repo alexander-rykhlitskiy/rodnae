@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form(method='GET' action='/')
+    .input-group.mb-3
+      input.form-control(name='area', value=area, type='text', placeholder='Месца', aria-label='Месца', aria-describedby='basic-addon2')
+      .input-group-append
+        button.btn.btn-outline-secondary(type='submit') Знайсці
+
+  each place in places
+    b= place['name']
+    p: i= place['address']
