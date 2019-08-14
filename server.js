@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 app.get('/', (req, res) => {
   var key = process.env.PLACE_API_KEY;
-  var area = req['query']['area'] || 'лидский район';
+  var area = req['query']['area'] || 'лідскі раён';
   var query = encodeURIComponent(`${area} достопримечательности`);
 
   var url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${query}&language=ru&key=${key}`;
